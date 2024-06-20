@@ -1,2 +1,2 @@
-# mysql_sec
+# mysql_operator
 MySQL administration tool
