@@ -34,13 +34,14 @@ app.mount("/static", StaticFiles(directory=STATIC_DIR), name="static")
 # Jinja2 템플릿 설정
 templates = Jinja2Templates(directory=TEMPLATES_DIR)
 
-# API 라우터 포함
-app.include_router(cognito_sign.router, prefix="/api/auth", tags=["authentication"])
 
-
+# 메인 페이지 라우트를 먼저 정의
 @app.get("/")
 async def home(request: Request):
     return templates.TemplateResponse("index.html", {"request": request})
+
+# 그 다음에 API 라우터 포함
+app.include_router(cognito_sign.router, prefix="/api/auth", tags=["authentication"])
 
 
 @app.get("/login")
