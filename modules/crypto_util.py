@@ -2,7 +2,7 @@ import base64
 from cryptography.hazmat.primitives.ciphers import algorithms, modes, Cipher
 from cryptography.hazmat.backends import default_backend
 from cryptography.hazmat.primitives import padding
-from backend.config import settings
+from config import settings
 
 # AES_KEY와 AES_IV를 환경 변수에서 읽어옵니다.
 AES_KEY = base64.urlsafe_b64decode(settings.aes_key)

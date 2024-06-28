@@ -1,6 +1,6 @@
 import asyncmy
 from typing import AsyncGenerator
-from backend.config import DB_CONFIG
+from config import DB_CONFIG
 
 
 async def get_db_connection() -> AsyncGenerator:

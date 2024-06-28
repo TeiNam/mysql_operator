@@ -2,8 +2,8 @@ from fastapi import APIRouter, HTTPException, Depends
 from fastapi.security import HTTPBearer, HTTPAuthorizationCredentials
 from pydantic import BaseModel
 import aioboto3
-from backend.modules.mysql_connector import MySQLConnector
-from backend.config import settings
+from modules.mysql_connector import MySQLConnector
+from config import settings
 
 router = APIRouter()
 security = HTTPBearer()
